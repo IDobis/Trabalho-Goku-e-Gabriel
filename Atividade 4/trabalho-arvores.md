@@ -2,16 +2,16 @@ Tipos de Árvores
 
 1. AVL
 
-A árvore AVL é uma Árvore Binária de Busca auto balanceada, criada por Adelson Velsky e Landis, ela mantém a diferença de altura entre as subárvores esquerda e direita de cada nó em no máximo 1.
+É uma Árvore Binária de Busca (BST) que possui balanceamento automático, ela foi criada por Adelson-Velsky e Landis com o objetivo de manter a árvore organizada e eficiente, sua principal característica é que a diferença de altura entre as subárvores esquerda e direita de cada nó não pode ser maior que 1, evitando que a árvore fique balanceada.
 
 Características 
 
-Ela possui uma estrutura binária, cada nó pode ter no máximo dois filhos ela realiza balanceamento automático sempre que ocorre alguma operação que provoque desequilíbrio na árvore. Para corrigir esses problemas são utilizadas rotações simples ou dupla, graças a esse mecanismo, as operações de busca, inserção e remoção mantêm um desempenho eficiente mesmo quando a quantidade de dados armazenados é grande.
+Ela possui uma estrutura binária, ou seja, cada nó pode ter no máximo dois filhos, sempre que uma inserção ou remoção causa desequilíbrio, a árvore realiza ajustes automaticamente para voltar ao estado balanceado, esses ajustes são feitos por meio de rotações simples ou duplas, graças a esse mecanismo, as operações de busca, inserção e remoção continuam apresentando um bom desempenho mesmo quando a quantidade de dados armazenados é grande.
 
 Vantagens e Desvantagens 
 
-A principal vantagem da Árvore AVL é o excelente desempenho nas operações de bsuca, já que a estrutura permanece sempre balanceada, isso garante uma complexidade de O(log n), tornando a localização de elementos rápida e prvisível.
-Apesar de bom desempenho, a implementação da árvore AVL é mais complexa do que a de uma ávore binária de busca comum, além disso, inserções e remoções podem exigir rotações fequentes para manter o balanceamento da estrutura.
+Uma das principais vantagens é o seu desempenho nas operações de busca, já que ela permanece balanceada durante o uso, isso faz com que a busca por elementos seja rápida e previsível, com complexidade O(log n).
+Porém, sua implementação é mais complexa quando comparada a uma árvore binária de busca comum, além disso para manter o balanceamento, podem ser necessárias rotações frequentes após inserções e remoções, o que aumenta o trabalho realizado pela estrutura.
 
 Exemplo Ilustrado 
 
@@ -35,13 +35,13 @@ A árvore é uma BST balanceada que utiliza cores vermelho e preta para organiza
 
 Regras de Coloração 
 
-Todo nó deve ser vermelho ou preto, a raiz da árvore  deve ser preta e um nó vermelho não pode possuir filhos vermelhos, além disso, todos os caminhos da raiz até as folhas devem possuir a mesma quantidade de nós pretos
+Cada nó deve ser classificado como vermelho ou preto, a raiz da árvore deve ser sempre preta, e um nó vermelho não pode ter filhos também vermelhos, além disso todos os caminhos da raiz até as folhas devem conter a mesma quantidade de nó pretos, ajudando a manter a árvore balanceada e eficiente.
 
 Vantagens e Desvantagens
 
 
-A árvore Rubro-Negra realiza menos rotações que a AVL durante inserções e remoções, tornando essas operações mais rápidas em muitas situações, por isso é bastante utilizada em bibliotecas e sistemas computacionais
-sua implementação é mais complexa devido ás regras de colaração e balanceamento, além disso a bsuca pode ser ligeiramente menos eficiente que uma árvere AVL
+Ela realiza menos rotações que a AVL durante inserções e remoções, tornando essas operações mais rápidas em muitas situações, por isso é bastante utilizada em bibliotecas e sistemas computacionais
+sua implementação é mais complexa devido ás regras de colaração e balanceamento, além disso a bsuca pode ser ligeiramente menos eficiente que uma árvere AVL.
 
 Exemplo Ilustrado:
 
@@ -55,11 +55,11 @@ V = Vermelho
 
 3. N-ária
 
-A árvore é uma estrutura de dados hierárquica em que cada nó pode possuir vários filhos, diferentemente das árvores binárias, que permitem no máximo dois filhos por nó, a árvore N-ária possibilita uma quantidade maior de ramificações, tonando-se adequada para representar estruturas mais complexas
+É uma estrutura de dados hierárquica em cada nó pode possuir vários filhos. Diferente das árvores binárias, que permitem ao máximo dois filhos por nó, á árvore N-ária pode um número maior de ramificações, sendo muito utilizada para representar estruturas mais complexas e organizadas em níveis.
 
 Diferenças 
 
-A principal diferença é a quantidade de filhos que cada nó pode possuir, enquanto uma árvore binária permite apenas dois filhos, ela árvore N-ária pode ter vários filhos, uma árvore N-ária pode ter vários filhos, dependendo da necessidade da aplicação
+A principal diferença entre uma árvore binária e uma árvore N-ária está na quantidade de filhos que cada nó pode possuir, enquanto a árvore binária permite dois filhos por nó, a árvore N-ária pode ter vários filhos, de aocrdo com a necessidade da aplicação, isso torna essa estrutura mais adequada para representar a hierarquias com muitos elementos relacionados.
 
 Vantagens e Desvantagens 
 
