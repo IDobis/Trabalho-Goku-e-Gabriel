@@ -79,4 +79,109 @@ As árvores N-árias são utilizadas em sistemas de arquivos, menus de aplicativ
 
 Rotação Simples a Direita 
 
-A rotação ela é utilizada para corrigir o desequilibrio de um árvore quando há excesso de nós na sub
+A rotação ela é utilizada para corrigir o desequilibrio de um árvore quando há excesso de nós na subárvore esquerda. Seu objetivo é restaurar o balancemaneto e manter a eficiência das operações.
+
+Situação:  Essa rotação ocorre em uma situação conhecida como Esquerda-Esquerda (LL), quando um novo nó é inserido na subárvore esquerda do filho esquerdo 
+
+Exemplo 
+
+            30
+          /
+       20
+      /
+    10
+
+Exemplo de depois da rotsção:
+
+        20
+     /     \
+    10      30
+
+
+Rotação Simples á Esquerda 
+
+A rotação á esquerda é utilizada para corrigir o desequilibrio causado pelo crescimento excessivo da subárvore direita.
+
+Situação: Ocorre na siruação Direita-Direita (RR) quando um novo nó é inserido na subárvore direita do filho direito.
+
+Exemplo Antes:
+
+     10
+       \
+        20
+         \
+          30 
+
+Exemplo Depois:
+
+       20
+      /   \
+    10     30
+
+Rotação Dupla 
+
+Esquerda-Direita : é utilizada quando o desequilíbrio acontece na subárvore esquerda, mas o novo elemento foi inserido á direita do filho esquerdo. Nesse caso, é necessário realizar duas ratações para que a árvore volte a ficar balanceada. 
+
+Exemplo antes:
+
+        30
+      /
+    10
+      \ 
+       20
+
+Exemplo depois:
+
+      20 
+     /   \
+    10    30
+
+Direita-Esquerda: Acontece quando o desequilíbrio ocorre na subárvore direita, mas o novo elemento foi inserido á esquerda do filho direito. Assim como no caso anterior, são necessárias duas rotações para corrigir a estrutura.
+
+Exemplo antes: 
+
+    10
+      \
+       30
+      /
+     20
+
+Exemplo depois:
+
+        20
+      /   \
+     10    30
+
+Inversão (espelhamento)
+É uma operação que troca a posição dos filhos esquerdo e direito de todos os nós da árvore, o resultado é uma estrutura que representa o espelho da árvore original.
+
+Ela pode ser aplicada em estudos de estruturas de dados, testes de algoritmos e aplicações que necessitam compararbárvores ou gerar versões espelhadas de uma estrutura.
+
+Exemplo antes da operação:
+           
+        10
+      /    \
+    5       15
+
+Exemplo Depois:
+
+         10
+       /    \
+     15      5
+
+Aplicações na Prática 
+Sistemas de Arquivos 
+Estre as estruturas que foi pesquisada, a árvore N-ária é a mais adequada para representar um sistema de arquivos, isso acontece porque uam pasta pode conter diversos arquivos e subpastas, não ficando limitada a apenas dois filhos como ocorre uma árvore binária. A utilização da árvore N-ária permite organizar os dados de forma hierárquica e intuitiva, facilitando a navegação entre diretórios e a localização de informações, além disso, essa estrutura oferece flexibilidade para armezenar uma grande quantidade de arquivos e pastas sem comprometer a organização do sistema. Um exemplo que poderia usar é a pasta "Documentos", que pode conter várias outras pastas, como "faculdade" ou "Projetos", além de arquivos individuais, dessa forma a árvore N-ária representa muito bem a estrutura utilizada pelos sistemas operacionais atuais.
+
+
+  | Estrutura | Nº Máximo de Filhos | Balanceamento | Complexidade de Busca | Complexidade de Inserção | Vantagem Principal | Desvantagem Principal | Exemplo de Aplicação |
+|------------|------------|------------|------------|------------|------------|------------|------------|
+| BST | 2 | Não possui balanceamento automático | O(log n) melhor caso e O(n) pior caso | O(log n) melhor caso e O(n) pior caso | Simplicidade de implementação | Pode ficar desbalanceada | Árvores de busca básicas |
+| AVL | 2 | Sim, através de rotações | O(log n) | O(log n) | Busca muito eficiente | Mais rotações durante atualizações | Índices e sistemas de consulta |
+| Rubro-Negra | 2 | Sim, através de coloração e rotações | O(log n) | O(log n) | Menos rotações que a AVL | Implementação mais complexa | Bibliotecas e sistemas operacionais |
+| N-ária | N | Depende da implementação | O(log n) em estruturas balanceadas | O(log n) ou proporcional à estrutura | Representa hierarquias complexas | Estrutura mais complexa | Sistemas de arquivos |
+
+Explicação 
+Ao analisar a tabela, podemos perceber que cada tipo de árvore possui características próprias e é mais adequada para determinadas situações, a BST é a mais simples, porém pode perder desempenho caso fique desbalanceada, as árvores AVL e Rubro-Negra possuem mecanismos de balanceamento que ajudam a manter as operações mais eficientes, já a árvore N-ária se diferencia por permitir vários filhos em um mesmo nó, sendo muito utilizada para representar estruturas hierárquicas, como sistemas de arquivos. Dessa forma, a escolha da estrutura depende das necessidades de cada aplicação.
+
+   
